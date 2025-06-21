@@ -1,11 +1,11 @@
 #!/bin/bash
 set -x
 
-huggingface-cli download Qwen/Qwen3-4B-Base --local-dir ./Qwen3-4B-Base
+huggingface-cli download Qwen/Qwen3-4B-Base --local-dir /workspace/Qwen3-4B-Base
 
 WANDB_MODE=offline bash eval_math_nodes.sh \
     --run_name /mnt/yaoxiang-wang-yeyuninterns-out/qingguo/simplerl_icl/qwen3_4b_math35_icl \
-    --init_model ./Qwen3-4B-Base \
+    --init_model /workspace/Qwen3-4B-Base \
     --template qwen-boxed \
     --tp_size 1 \
     --add_step_0 true \
