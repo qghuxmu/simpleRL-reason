@@ -7,7 +7,7 @@ pip uninstall latex2sympy2 -y
 cd latex2sympy
 pip install -e . --use-pep517
 pip install Pebble
-pip install sympy==1.12
+pip install sympy==1.13.1
 pip install antlr4-python3-runtime==4.11.1
 pip install timeout-decorator
 pip install jieba
@@ -109,10 +109,10 @@ eval_script_path="sh/eval.sh"
 
 HDFS_HOME=TO_BE_FILLED
 
-base_checkpoint_path="${HDFS_HOME}/checkpoints/${RUN_NAME}"
+base_checkpoint_path="${RUN_NAME}"
 
 
-init_model_path="${HDFS_HOME}/base_models/${INIT_MODEL_PATH}"
+init_model_path="${INIT_MODEL_PATH}"
 chmod +x sh/convert_and_evaluate_gpu_nodes.sh
 
 
