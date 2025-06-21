@@ -4,7 +4,7 @@ set -x
 huggingface-cli download Qwen/Qwen3-4B-Base --local-dir ./Qwen3-4B-Base
 
 WANDB_MODE=offline bash eval_math_nodes.sh \
-    --run_name /mnt/yaoxiang-wang-yeyuninterns-out/qingguo/simplerl/qwen3_4b_math35 \
+    --run_name /mnt/yaoxiang-wang-yeyuninterns-out/qingguo/simplerl_icl/qwen3_4b_math35_icl \
     --init_model ./Qwen3-4B-Base \
     --template qwen-boxed \
     --tp_size 1 \
