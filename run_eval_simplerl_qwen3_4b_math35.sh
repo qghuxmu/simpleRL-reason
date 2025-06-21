@@ -1,7 +1,7 @@
 #!/bin/bash
 set -x
 
-huggingface-cli snapshot-download Qwen/Qwen3-4B-Base --local-dir ./Qwen3-4B-Base
+huggingface-cli download Qwen/Qwen3-4B-Base --local-dir ./Qwen3-4B-Base
 
 WANDB_MODE=offline bash eval_math_nodes.sh \
     --run_name /mnt/yaoxiang-wang-yeyuninterns-out/qingguo/simplerl/qwen3_4b_math35 \
