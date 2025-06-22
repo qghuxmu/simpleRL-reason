@@ -7,8 +7,8 @@ WANDB_MODE=offline bash eval_math_nodes.sh \
     --run_name /mnt/yaoxiang-wang-yeyuninterns-out/qingguo/simplerl/qwen3_4b_math35_dapo_with_format \
     --init_model /workspace/Qwen3-4B-Base \
     --template qwen-boxed \
-    --tp_size 8 \
-    --add_step_0 true \
+    --tp_size 1 \
+    --add_step_0 false \
     --temperature 1.0 \
     --top_p 0.95 \
     --max_tokens 16000 \
